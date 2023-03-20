@@ -31,8 +31,8 @@ $ npm -v
 
 in your project directory:
 - Install Jest using: `npm install --save-dev jest`
-- Install babel using: npm install --save-dev babel-jest @babel/core @babel/present-env
-- Install ESLint using: npm install --save-dev eslint
+- Install babel using: `npm install --save-dev babel-jest @babel/core @babel/present-env`
+- Install ESLint using: `npm install --save-dev eslint`
 
 ## Finally…
 Don’t forget to run `npm install` from the terminal of your project folder to install all necessary project dependencies.
