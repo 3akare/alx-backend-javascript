@@ -34,13 +34,5 @@ in your project directory:
 - Install babel using: npm install --save-dev babel-jest @babel/core @babel/present-env
 - Install ESLint using: npm install --save-dev eslint
 
-## Configuration files
-### `package.json`
-Click to show/hide file contents
-### `babel.config.js`
-Click to show/hide file contents
-### `.eslintrc.js`
-Click to show/hide file contents
-
 ## Finally…
 Don’t forget to run `npm install` from the terminal of your project folder to install all necessary project dependencies.
