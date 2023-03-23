@@ -5,7 +5,7 @@ export default class Pricing {
     if (typeof amount !== 'number') {
       throw TypeError('Amount must be a number');
     }
-    if (!currency instanceof Currency) {
+    if ((currency instanceof Currency) !== true) {
       throw TypeError('Currency must be a Currency');
     }
     this._amount = amount;
@@ -29,7 +29,7 @@ export default class Pricing {
   }
 
   displayFullPrice() {
-    return `${this._amount} ${this._currency.name} ${this._currency.code}`;
+    return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
   // Can't call static methods on an object, only on an object class
