@@ -7,8 +7,10 @@ export default function cleanSet(set, startString) {
   for (const x of set.keys()) {
     if (x.includes(startString)) {
       newString !== '' ? newString += '-' : null; /* eslint-disable-line */
-      newString += x.slice(startString.length);
+      newString += x.slice((x.indexOf(startString[0]) + startString.length));
     }
   }
   return newString;
 }
+console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
+console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
