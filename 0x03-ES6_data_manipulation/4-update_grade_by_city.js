@@ -11,6 +11,6 @@ export default function updateStudentGradeByCity(array, city, newGrades) {
   } else {
     newArray = (returnArray.map((x) => Object.assign(x, { grade: (x.id === newGrades[0].studentId ? newGrades[0].grade : 'N/A') })));
   }
-  // Im not very proud of this function tbvh
+  // Im not very proud of this function tbvh, but it does what its meant to do
   return newArray;
 }
