@@ -8,10 +8,10 @@ export default function cleanSet(set, startString) {
   for (const x of set.values()) {
     if (x.startsWith(startString) && typeof x === 'string') {
       newString = x.substring(startString.length);
-      returnArray.push(newString);
+      if (newString && newString !== x) {
+        returnArray.push(newString);
+      }
     }
   }
   return returnArray.join('-');
 }
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
