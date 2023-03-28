@@ -1,16 +1,16 @@
 export default function cleanSet(set, startString) {
-  const parts = [];
+  const returnArray = [];
   if (!set || !startString || !(set instanceof Set) || typeof startString !== 'string') {
     return '';
   }
-  for (const value of set.values()) {
-    if (typeof value === 'string' && value.startsWith(startString)) {
-      const valueSubStr = value.substring(startString.length);
 
-      if (valueSubStr && valueSubStr !== value) {
-        parts.push(valueSubStr);
+  for (const x of set.values()) {
+    if (x.startsWith(startString) && typeof x === 'string') {
+      const newString = x.substring(startString.length);
+      if (newString && newString !== x) {
+        returnArray.push(newString);
       }
     }
   }
-  return parts.join('-');
+  return returnArray.join('-');
 }
