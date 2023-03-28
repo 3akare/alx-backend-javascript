@@ -3,12 +3,12 @@ export default function cleanSet(set, startString) {
   if (!set || !startString || !(set instanceof Set) || typeof startString !== 'string') {
     return '';
   }
+  for (const value of set.values()) {
+    if (value.startsWith(startString) && typeof value === 'string') {
+      const valueSubStr = value.substring(startString.length);
 
-  for (const x of set.values()) {
-    if (x.startsWith(startString) && typeof x === 'string') {
-      const newString = x.substring(startString.length);
-      if (newString && newString !== x) {
-        returnArray.push(newString);
+      if (valueSubStr && valueSubStr !== value) {
+        returnArray.push(valueSubStr);
       }
     }
   }
