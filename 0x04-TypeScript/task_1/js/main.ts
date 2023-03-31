@@ -6,12 +6,7 @@ export interface Teacher {
     [index:string] : string | number | boolean;
 }
 
-const teacher3: Teacher = {
-    firstName: 'John',
-    fullTimeEmployee: false,
-    lastName: 'Doe',
-    location: 'London',
-    contract: false,
-  };
-  
-  console.log(teacher3);
+
+export interface Directors extends Teacher {
+    numberOfReports : 17;
+}
