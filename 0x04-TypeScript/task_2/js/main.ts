@@ -15,7 +15,7 @@ export class Director implements DirectorInterface {
         return 'Working from home';
     }
     getToWork() : string{
-        return 'coffee break'
+        return 'coffee break';
     }
     workDirectorTasks(): string {
         return 'getting to director tasks';
@@ -30,13 +30,28 @@ export class Teacher implements TeacherInterface{
         return 'Cannot have a break';
     }
     workTeacherTasks(): string {
-        return 'Getting to work'
+        return 'Getting to work';
     }
 }
 
 export function createEmployee(salary: number | string) : Director | Teacher{
     if(typeof salary === 'number' && salary < 500){
-        return new Teacher
+        return new Teacher;
     }
     return new Director;
+}
+
+
+export function isDirector(employee : Director | Teacher) : boolean{
+    const status = employee instanceof Director? true : false
+    return status;
+}
+
+export function executeWork(employee : any ) : void{
+    if(isDirector(employee)){
+        console.log(employee.workDirectorTasks());
+    }
+    else{
+        console.log(employee.workTeacherTasks());
+    }
 }
