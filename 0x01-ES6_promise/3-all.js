@@ -1,6 +1,6 @@
 import { uploadphoto, createUser } from './utils';
 
-function handelProfileSignup() {
+export default function handelProfileSignup() {
   const photo = uploadphoto();
   const user = createUser();
   const all = Promise.all([photo, user]);
@@ -11,5 +11,3 @@ function handelProfileSignup() {
     throw Error('Signup system offline');
   });
 }
-
-handelProfileSignup();
