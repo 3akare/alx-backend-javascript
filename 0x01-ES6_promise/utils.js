@@ -1,9 +1,19 @@
-const uploadphoto = {
-    status: 200,
-    body: 'photo-profile-1',
+export function uploadphoto() {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve({ status: 200, body: 'photo-profile-1' });
+    } catch (error) {
+      reject(console.log(error));
+    }
+  });
 }
 
-const createUser = {
-    firstName: 'Guillaume',
-    lastName: 'Salva',
+export function createUser() {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve({ firstName: 'Guillaume', lastName: 'Salva' });
+    } catch (error) {
+      reject(console.log(error));
+    }
+  });
 }
