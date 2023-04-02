@@ -1,19 +1,9 @@
 export function uploadphoto() {
-  return new Promise((resolve, reject) => {
-    try {
-      resolve({ status: 200, body: 'photo-profile-1' });
-    } catch (error) {
-      reject(console.log(error));
-    }
-  });
+  return new Promise((resolve) => resolve({ status: 200, body: 'photo-profile-1' }));
 }
 
 export function createUser() {
-  return new Promise((resolve, reject) => {
-    try {
-      resolve({ firstName: 'Guillaume', lastName: 'Salva' });
-    } catch (error) {
-      reject(console.log(error));
-    }
+  return new Promise((resolve) => {
+    resolve({ firstName: 'Guillaume', lastName: 'Salva' });
   });
 }

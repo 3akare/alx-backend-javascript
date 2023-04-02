@@ -7,6 +7,6 @@ export default function handelProfileSignup() {
       console.log(`${message[0].body} ${message[1].firstName} ${message[1].lastName}`);
     })
     .catch(() => {
-      throw Error('Signup system offline');
+      console.log('Signup system offline');
     });
 }
