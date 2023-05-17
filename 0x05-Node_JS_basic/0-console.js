@@ -1,10 +1,9 @@
 /**
- *
  * @param
  * Display a message
  */
 
-function displayMessage (params) {
+const  displayMessage = (params) => {
   process.stdout.write(params);
 }
 
