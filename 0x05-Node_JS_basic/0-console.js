@@ -3,8 +3,8 @@
  * Display a message
  */
 
-const  displayMessage = (params) => {
+const displayMessage = (params) => {
   process.stdout.write(params);
-}
+};
 
 module.exports = displayMessage;
