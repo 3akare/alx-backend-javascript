@@ -4,7 +4,7 @@
  */
 
 const displayMessage = (params) => {
-  process.stdout.write(params);
+  console.log(params);
 };
 
 module.exports = displayMessage;
