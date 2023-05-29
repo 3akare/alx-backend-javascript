@@ -20,7 +20,7 @@ describe('API integration test', () => {
       const cartId = 'abc'; // Invalid cart ID
 
       request.get(`${API_URL}/cart/${cartId}`, (_err, res, body) => {
-        expect(res.statusCode).to.equal(400);
+        expect(res.statusCode).to.equal(404);
         done();
       });
     });
