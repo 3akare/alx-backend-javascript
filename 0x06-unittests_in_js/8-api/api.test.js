@@ -1,16 +1,14 @@
-const request = require('supertest');
-const express = require('express');
+const request = require('request');
 const { expect } = require('chai');
-const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Welcome to the payment system');
-});
+describe('API integration test', () => {
+  const API_URL = 'http://localhost:7865';
 
-describe('Express server', () => {
-  it('should return the welcome message for GET /', async () => {
-    const response = await request(app).get('/');
-    expect(response.status).to.equal(200);
-    expect(response.text).to.equal('Welcome to the payment system');
+  it('GET / returns correct response', (done) => {
+    request.get(`${API_URL}/`, (_err, res, body) => {
+      expect(res.statusCode).to.equal(200);
+      expect(body).to.equal('Welcome to the payment system');
+      done();
+    });
   });
 });
