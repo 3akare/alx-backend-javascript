@@ -9,9 +9,9 @@ describe('calculateNumber', () => {
   });
 
   it('should return the subtraction of two rounded numbers when type is "SUBTRACT"', () => {
-    assert.strictEqual(calculateNumber('SUBTRACT', 2.3, 4.6), 3);
-    assert.strictEqual(calculateNumber('SUBTRACT', 5.8, 3.1), -3);
-    assert.strictEqual(calculateNumber('SUBTRACT', 7.2, 9.9), 3);
+    assert.strictEqual(calculateNumber('SUBTRACT', 2.3, 4.6), -3);
+    assert.strictEqual(calculateNumber('SUBTRACT', 5.8, 3.1), 3);
+    assert.strictEqual(calculateNumber('SUBTRACT', 7.2, 9.9), -3);
   });
 
   it('should return the division of two rounded numbers when type is "DIVIDE"', () => {
